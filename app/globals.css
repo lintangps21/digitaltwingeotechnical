@@ -1,0 +1,137 @@
+/* ------------------------------------------------------------- */
+/* --- 1. TAILWIND IMPORTS (Must be at the very top) */
+/* ------------------------------------------------------------- */
+@import "tailwindcss";
+
+/* ------------------------------------------------------------- */
+/* --- 2. THEME DEFINITIONS AND CUSTOM VARIABLES --- */
+/* ------------------------------------------------------------- */
+
+/* --- LIGHT MODE THEME (Default) - Uses :root */
+:root {
+  /* Core Variables */
+  --font-size: 14px;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 0.75rem;
+
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --primary: #13432F;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --ring: #13432F;
+  
+  /* DTG BRANDING MAPPING */
+  --dtg-text-primary: var(--foreground);
+  --dtg-text-light: var(--muted-foreground);
+  --dtg-teal: var(--primary);
+  --dtg-teal-dark: #077190; /* Custom hover shade */
+  --dtg-bg-card: #ffffff;
+  --dtg-border-medium: #d1d5db; /* Approx from your old list */
+  --dtg-bg-hover: #f3f4f6;
+
+  /* RGB Helpers for Transparency (Needed for Header) */
+  --rgb-background: 255, 255, 255;
+}
+
+/* --- DARK MODE THEME - Uses html.dark selector */
+html.dark {
+  --background: #1A1A1A;
+  --foreground: #e2e8f0;
+  --primary: #68DBCF;
+  --primary-foreground: #0a1414;
+  --secondary: #1a2828;
+  --muted-foreground: #94a3b8;
+  --border: #2d3f3f;
+  --ring: #68DBCF;
+
+  /* DTG BRANDING MAPPING */
+  --dtg-text-primary: var(--foreground);
+  --dtg-text-light: var(--muted-foreground);
+  --dtg-teal: var(--primary);
+  --dtg-teal-dark: #0E927F;
+  --dtg-bg-card: #1a2828;
+  --dtg-border-medium: #525252;
+  --dtg-bg-hover: #333333;
+
+  /* RGB Helpers for Transparency (Needed for Header) */
+  --rgb-background: 10, 20, 20;
+}
+
+
+@layer base {
+    /* This ensures background/foreground colors apply to the entire page body */
+    body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-size: var(--font-size);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+}
+
+/* ------------------------------------------------------------- */
+/* --- 2. COMPONENTS LAYER (Custom Styling for Unclassed Elements) --- */
+/* ------------------------------------------------------------- */
+@layer components {
+    /* Input and form styling (Moved from base layer) */
+    input, textarea {
+        background-color: var(--dtg-bg-hover);
+        border-color: var(--dtg-border-medium);
+        color: var(--foreground); /* Use foreground for input text color */
+    }
+    input::placeholder, textarea::placeholder {
+        color: var(--muted-foreground);
+    }
+    
+    /* Button base styling (Fixed syntax and moved from base layer) */
+    button {
+        border-color: var(--dtg-border-medium);
+        border-radius: var(--radius); /* Use your defined variable for the radius */
+        /* You can add default text color/weight here if needed, but Tailwind Button.tsx handles it */
+    }
+}
+
+/* ------------------------------------------------------------- */
+/* --- 5. Custom Utilities and Manual Header Class --- */
+/* ------------------------------------------------------------- */
+
+/* This class will ensure your header background and border ALWAYS work (Use this in Header.tsx) */
+.header-bg-manual {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    
+    /* Apply Border */
+    border-bottom: 1px solid var(--border);
+    
+    /* Apply Blur (If supported by browser) */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    /* Apply Background & Transparency using RGB helper */
+    background-color: rgba(var(--rgb-background), 0.95);
+    
+    /* Apply Transitions */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* Custom transitions (kept) */
+.dtg-transition {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    /* Your base state, matching your 'opacity-60' class */
+    opacity: 0.6;
+  }
+  50% {
+    /* The 'twinkle' state */
+    opacity: 1;
+  }
+}

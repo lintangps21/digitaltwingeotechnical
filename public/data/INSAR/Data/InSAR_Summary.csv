@@ -1,0 +1,3 @@
+Location,Instrument,Site,Lat,Lon,Satellite,Origin,Product,Flight Direction,Polarization,Beam Mode,Path,Orbit,Frame,Total Data,Processed Data,Data Source,Notes
+Tailing Storage Facilities (TSF),SLC,Telfer Mine,-21.7185,122.2598,Sentinel 1-C,,,DESCENDING,VV+VH,IW,17,2638,663,29,29,ASF Data Search (https://search.asf.alaska.edu/),No data available from January 2022 to March 2025 due to Sentinel-1B power issue.
+Tailing Storage Facilities (TSF),MSI,Telfer Mine,-21.7185,122.2598,Sentinel 2,ESA,Level 2-A,,,,,117,,9,9,Copernicus Browser (https://browser.dataspace.copernicus.eu/),
