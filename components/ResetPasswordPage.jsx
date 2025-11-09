@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "../supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 import { MdShield } from "react-icons/md";
 
 const ResetPasswordPage = () => {
@@ -83,7 +83,7 @@ const ResetPasswordPage = () => {
         boxSizing: "border-box",
         padding: "100px",
         overflowY: "auto",
-        backgroundImage: `url("/radarBackground.png")`,
+        backgroundImage: `url("/background/radarBackground.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#f5f5f5",

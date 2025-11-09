@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "../supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 
 const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
@@ -57,7 +57,7 @@ const ForgotPasswordPage = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundImage: `url("/radarBackground.png")`,
+        backgroundImage: `url("/background/radarBackground.png")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         fontFamily: "Inter, sans-serif",
