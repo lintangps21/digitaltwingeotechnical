@@ -17,7 +17,7 @@ export function About() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl text-[var(--dtg-teal)] mb-6">About Digital Twin Geotechnical</h2>
+            <h2 className="text-3xl text-[var(--dtg-primary-teal-dark)] mb-6">About Digital Twin Geotechnical</h2>
             <p className="mb-6">
               Digital Twin Geotechnical is a 100% Australian owned mining services company providing real-time
               remote mine monitoring and related services for global mining cleints from our Geotechnical
@@ -32,7 +32,7 @@ export function About() {
             <div className="space-y-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[var(--dtg-teal)] mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[var(--dtg-primary-teal-dark)] mt-0.5 flex-shrink-0" />
                   <span>{feature}</span>
                 </div>
               ))}
@@ -42,20 +42,20 @@ export function About() {
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-teal-500/80 to-transparent border border-teal-800 p-8">
               <div className="h-full flex flex-col justify-center gap-8">
-                <div className="border-l-4 border-[var(--dtg-teal)] pl-6">
-                  <div className="text-2xl text-[var(--dtg-teal)] mb-2">Innovation</div>
+                <div className="border-l-4 border-[var(--dtg-primary-teal-dark)] pl-6">
+                  <div className="text-2xl text-[var(--dtg-primary-teal-dark)] mb-2">Innovation</div>
                   <p >
                     Pushing the boundaries of what's possible in geotechnical engineering
                   </p>
                 </div>
-                <div className="border-l-4 border-[var(--dtg-teal)] pl-6">
-                  <div className="text-2xl text-[var(--dtg-teal)] mb-2">Precision</div>
+                <div className="border-l-4 border-[var(--dtg-primary-teal-dark)] pl-6">
+                  <div className="text-2xl text-[var(--dtg-primary-teal-dark)] mb-2">Precision</div>
                   <p >
                     Delivering accurate, reliable data for critical decision-making
                   </p>
                 </div>
-                <div className="border-l-4 border-[var(--dtg-teal)] pl-6">
-                  <div className="text-2xl text-[var(--dtg-teal)] mb-2">Partnership</div>
+                <div className="border-l-4 border-[var(--dtg-primary-teal-dark)] pl-6">
+                  <div className="text-2xl text-[var(--dtg-primary-teal-dark)] mb-2">Partnership</div>
                   <p >
                     Working closely with clients to achieve project success
                   </p>

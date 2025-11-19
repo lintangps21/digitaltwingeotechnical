@@ -79,7 +79,7 @@ export function Header() {
             <div>
               <span className="text-xl font-bold text-foreground pb-1">
                 {/* Highlight the key part in Primary Teal */}
-                <span className="text-[var(--primary)] mr-1">
+                <span className="text-[var(--dtg-primary-teal-dark)] mr-1">
                   Digital Twin
                 </span>
 
@@ -91,7 +91,7 @@ export function Header() {
                 style={{
                   // Use your custom gradient variables here. We'll use your primary teal.
                   // We'll replace '#00E0D9' with 'var(--primary)' for theme consistency.
-                  background: `radial-gradient(circle at center, var(--primary), transparent)`,
+                  background: `radial-gradient(circle at center, var(--dtg-primary-teal-dark), transparent)`,
                 }}
               />
             </div>

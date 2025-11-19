@@ -69,10 +69,7 @@ function LogoSection({ Subtitle = [] }) {
                         DTG FOCUS
                     </p>
                     <p
-                        style={{
-                            fontSize: "12px",
-                            color: "#aaa"
-                        }}
+                        className="text-[var(--dtg-text-light)]"
                     >
                         Geotechnical Monitoring Dashboard - {Subtitle}
                     </p>
@@ -81,14 +78,14 @@ function LogoSection({ Subtitle = [] }) {
             {!loading && userSite && (
                 <div style={{ display: "flex", alignItems: "center", padding: "0 10px", flex: "0 0 auto", gap: 20 }}>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-                        <h2 style={{ margin: 0, fontSize: "14px" }}>
+                        <h4 className="text-[var(--dtg-text-primary)]">
                             {userSite.displayname}
-                        </h2>
-                        <h3 style={{ margin: 0, fontSize: "12px", color: "#aaa" }}>
+                        </h4>
+                        <p className="text-[var(--dtg-text-light)]">
                             {userSite.site?.site_name
                                 ? `${userSite.site.site_name}, ${userSite.site.company}`
                                 : "Administrator"}
-                        </h3>
+                        </p>
                     </div>
                     <button
                         ref={userBtnRef}
@@ -97,20 +94,7 @@ function LogoSection({ Subtitle = [] }) {
                         onClick={() => {
                             setShowUserMenu((v) => !v);
                         }}
-                        style={{
-                            backgroundColor: "rgba(42, 42, 42, 0.5)",
-                            border: "1px solid #3a3a3a",
-                            borderRadius: "10px",
-                            padding: "5px 15px",
-                            gap: "10px",
-                            cursor: "pointer",
-                            color: "#fff",
-                            outline: "none",
-                            display: "flex",
-                            alignItems: "center"
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#333333")}
-                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "rgba(42, 42, 42, 0.5)")}
+                        className="flex items-center p-2 bg-[var(--dtg-bg-card)] hover:bg-[var(--dtg-bg-hover)]"
                     >
                         <div
                             style={{

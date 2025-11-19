@@ -7,18 +7,14 @@ export const radarMenuItems = [
 ];
 
 export const insarMenuItems = [
-  { label: "DEFORMATION", path: "/tools/:client/Def_insar", icon: "MdSatellite" },
   { label: "WATER BODY", path: "/tools/:client/WB_insar", icon: "FaArrowUpFromGroundWater" },
 ];
 
 export const adminMenuItems = [
-  { label: "SAFETY INSPECTION", path: "/admin/SafetyInspection", icon: "LuClipboardCheck" },
-  { label: "SAFETY SUMMARY", path: "/admin/SafetySummary", icon: "LuChartColumn" },
-  { label: "RADAR MONITORING", path: "/admin/RadarMonitoring", icon: "LuClock4" },
-  { label: "NOTIFICATIONS", path: "/admin/Notifications", icon: "FaRegBell" },
-  { label: "ALARM SUMMARY", path: "/admin/AlarmSummary", icon: "PiWarning" },
-  { label: "DATA QUALITY", path: "/admin/DataQuality", icon: "PiPulse" },
-  { label: "AVAILABILITY", path: "/admin/Availability", icon: "FiTrendingUp" },
-  { label: "PROJECT", path: "/admin/Project", icon: "FaTasks" },
-  { label: "REPORTS", path: "/admin/Reports", icon: "HiOutlineDocumentChartBar" }
+  { label: "RADAR MONITORING", path: "/admin/Radar/RadarMonitoring", icon: "LuClock4" },
+  { label: "NOTIFICATIONS", path: "/admin/Radar/Notifications", icon: "FaRegBell" },
+  { label: "ALARM SUMMARY", path: "/admin/Radar/AlarmSummary", icon: "PiWarning" },
+  { label: "DATA QUALITY", path: "/admin/Radar/DataQuality", icon: "PiPulse" },
+  { label: "AVAILABILITY", path: "/admin/Radar/Availability", icon: "FiTrendingUp" },
+  { label: "REPORTS", path: "/admin/Radar/Reports", icon: "HiOutlineDocumentChartBar" }
 ];

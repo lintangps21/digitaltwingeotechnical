@@ -19,15 +19,8 @@ const NavSection = ({ menuItems, activeComponent, onMenuClick }) => {
 
     return (
         <div
-            style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                gap: "20px",
-                width: "100%",
-                borderRadius: "20px",
-                background: "linear-gradient(to bottom, #1E1E1E, #3A3A3A)",
-            }}
+            className="flex items-center gap-20 w-full bg-[var(--dtg-bg-card)] text-[var(--dtg-text-light)] border-t-1 border-b-2 border-[var(--dtg-border-dark)]"
+            
         >
             {menuItems.map((item) => {
                 const Icon = getIconComponent(item.icon);
@@ -41,27 +34,7 @@ const NavSection = ({ menuItems, activeComponent, onMenuClick }) => {
                         key={item.label} // React 'key' can still be label
                         type="button"
                         onClick={() => onMenuClick(itemKey)} // Use the unique itemKey
-                        style={{
-                            width: "250px",
-                            border: "none",
-                            borderRadius: "20px",
-                            outline: "none",
-                            cursor: "pointer",
-                            whiteSpace: "nowrap",
-                            fontSize: "14px",
-                            fontWeight: isActive(itemKey) ? "bold" : "normal",
-                            color: isActive(itemKey) ? "#fff" : "#ccc",
-                            background: isActive(itemKey) ? "#B14813" : "transparent",
-                            transition: "all 0.3s ease",
-                            position: "relative",
-                            padding: "10px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            gap: "8px",
-                        }}
-                        onMouseEnter={(e) => (e.currentTarget.style.color = "#fff")}
-                        onMouseLeave={(e) => (e.currentTarget.style.color = isActive(itemKey) ? "#fff" : "#ccc")}
+                        className={`menu-button ${isActive(itemKey) ? 'menu-button--active' : ''}`}
                     >
                         {Icon && <Icon size={18} />}
                         {toProperTitleCase(item.label)}

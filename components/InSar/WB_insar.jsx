@@ -176,23 +176,8 @@ const WB_insar = () => {
   ];
 
   return (
-    <div style={{
-      width: "100vw",
-      height: "100vh",
-      boxSizing: "border-box",
-      overflowY: "auto",
-      overflowX: "hidden",
-      backgroundColor: "#050910",
-      color: "#f5f5f5",
-      fontFamily: "Inter, sans-serif",
-      display: "flex",
-      flexDirection: "column",
-      padding: "10px",
-      gap: "10px"
-    }}>
+    <div style={{ flex: 1, paddingTop: "10px" }}>
       <div style={{ display: "flex", flexDirection: "column", background: "#050910" }}>
-        <LogoSection Subtitle="InSAR" />
-        <NavSection menuItems={insarMenuItems} />
       </div>
       <div style={{
         display: "flex",

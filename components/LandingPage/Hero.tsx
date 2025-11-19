@@ -46,7 +46,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-left">
             <Button
               variant="brand"
-              onClick={()=>scrollToSection("service")}
+              onClick={()=>scrollToSection("services")}
               className="dtg-transition"
             >
               Get Started

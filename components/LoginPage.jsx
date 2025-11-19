@@ -62,7 +62,7 @@ const LoginPage = () => {
 
         if (isAdmin) {
             setTimeout(() => {
-                router.replace(`/admin/RadarMonitoring`);
+                router.replace(`/admin/Radar`);
             }, 3000);
         } else {
             const firstClient = sites[0]?.stock_code;

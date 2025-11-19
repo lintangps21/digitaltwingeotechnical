@@ -67,19 +67,19 @@ export function Services() {
     },
   ];
 
-  const iconColor = 'var(--dtg-teal)';
+  const iconColor = 'var(--dtg-primary-teal-dark)';
   const router = useRouter();
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <section id="services" className="py-20 relative bg-[var(--background)]">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-500/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-900/30 to-transparent"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-semibold mb-4 text-[var(--dtg-teal)]">
+          <h2 className="text-3xl font-semibold mb-4 text-[var(--dtg-primary-teal-dark)]">
             Our Services
           </h2>
-          <p className="max-w-2xl mx-auto text-[var(--dtg-text-light)]">
+          <p className="max-w-2xl mx-auto text-[var(--dtg-text-secondary)]">
             Comprehensive digital twin solutions for modern geotechnical
             engineering challenges
           </p>
@@ -98,9 +98,7 @@ export function Services() {
               <Card
                 key={index}
                 className={`
-      border-[var(--border)]
-      bg-teal-500/10 
-      hover:bg-teal-500/50 
+      border-1 border-teal-500 text-emerald-500 hover:bg-teal-600/30
       hover:border-teal-500/80 
       transition-all duration-300 
       hover:shadow-lg hover:shadow-teal-500/10
@@ -124,10 +122,10 @@ export function Services() {
                       height={24}
                     />
                   </div>
-                  <CardTitle className="text-2xl font-semibold text-[var(--dtg-teal)]">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-semibold text-[var(--dtg-primary-teal-dark)]">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-[var(--dtg-primary)]">
+                  <CardDescription className="text-[var(--dtg-text-secondary)]">
                     {service.description}
                   </CardDescription>
                 </CardContent>

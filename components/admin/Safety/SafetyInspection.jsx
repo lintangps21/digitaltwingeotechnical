@@ -1,9 +1,9 @@
-import LogoSection from "../Reusable/HeaderComponents/LogoSection";
+import LogoSection from "../../Reusable/HeaderComponents/LogoSection";
 import NavSection from "@/components/Reusable/HeaderComponents/NavSection";
 import { adminMenuItems } from "@/config/menuConfig";
 import React from "react";
 
-function Project() {
+function SafetyInspection() {
 
 
   return (
@@ -28,4 +28,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default SafetyInspection;
