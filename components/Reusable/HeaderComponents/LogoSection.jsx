@@ -25,7 +25,7 @@ function LogoSection({ Subtitle = [] }) {
     };
 
     return (
-        <div className="flex justify-between items-center mb-5 mt-5">
+        <div className="flex justify-between items-center bg-[image:var(--dtg-bg-header)] p-5">
             <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
                 <div style={{ display: "flex", alignItems: "center", padding: "5px 10px", flex: "0 0 auto" }}>
                     <button
@@ -78,10 +78,10 @@ function LogoSection({ Subtitle = [] }) {
             {!loading && userSite && (
                 <div style={{ display: "flex", alignItems: "center", padding: "0 10px", flex: "0 0 auto", gap: 20 }}>
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
-                        <h4 className="text-[var(--dtg-text-primary)]">
+                        <h4 className="text-white">
                             {userSite.displayname}
                         </h4>
-                        <p className="text-[var(--dtg-text-light)]">
+                        <p className="text-[var(--dtg-text-muted)]">
                             {userSite.site?.site_name
                                 ? `${userSite.site.site_name}, ${userSite.site.company}`
                                 : "Administrator"}

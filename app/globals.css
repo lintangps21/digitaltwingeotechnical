@@ -5,7 +5,11 @@
 /* ------------------------------------------------------------- */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
-    *, :before, :after, ::backdrop {
+
+    *,
+    :before,
+    :after,
+    ::backdrop {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
@@ -80,7 +84,9 @@
 /* --- 2. THEME LAYER (Fonts, Sizes, Base Palette) --- */
 /* ------------------------------------------------------------- */
 @layer theme {
-  :root, :host {
+
+  :root,
+  :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-red-50: oklch(.971 .013 17.38);
@@ -234,7 +240,11 @@
 /* --- 3. BASE LAYER (Resets & Base Styles) --- */
 /* ------------------------------------------------------------- */
 @layer base {
-  *, :after, :before, ::backdrop {
+
+  *,
+  :after,
+  :before,
+  ::backdrop {
     box-sizing: border-box;
     border: 0 solid;
     margin: 0;
@@ -248,7 +258,8 @@
     padding: 0;
   }
 
-  html, :host {
+  html,
+  :host {
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
     line-height: 1.5;
@@ -273,7 +284,12 @@
     text-decoration: underline dotted;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: inherit;
     font-weight: inherit;
   }
@@ -284,11 +300,15 @@
     text-decoration: inherit;
   }
 
-  b, strong {
+  b,
+  strong {
     font-weight: bolder;
   }
 
-  code, kbd, samp, pre {
+  code,
+  kbd,
+  samp,
+  pre {
     font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
     font-feature-settings: var(--default-mono-font-feature-settings, normal);
     font-variation-settings: var(--default-mono-font-variation-settings, normal);
@@ -299,7 +319,8 @@
     font-size: 80%;
   }
 
-  sub, sup {
+  sub,
+  sup {
     vertical-align: baseline;
     font-size: 75%;
     line-height: 0;
@@ -332,21 +353,34 @@
     display: list-item;
   }
 
-  ol, ul, menu {
+  ol,
+  ul,
+  menu {
     list-style: none;
   }
 
-  img, svg, video, canvas, audio, iframe, embed, object {
-    vertical-align: middle;
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
     display: block;
   }
 
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
   }
 
-  button, input, select, optgroup, textarea {
+  button,
+  input,
+  select,
+  optgroup,
+  textarea {
     font: inherit;
     font-feature-settings: inherit;
     font-variation-settings: inherit;
@@ -415,7 +449,7 @@
   ::-webkit-datetime-edit {
     padding-block: 0;
   }
-  
+
   ::-webkit-datetime-edit-year-field,
   ::-webkit-datetime-edit-month-field,
   ::-webkit-datetime-edit-day-field,
@@ -431,7 +465,8 @@
     box-shadow: none;
   }
 
-  button, input:where([type="button"], [type="reset"], [type="submit"]) {
+  button,
+  input:where([type="button"], [type="reset"], [type="submit"]) {
     appearance: button;
   }
 
@@ -528,18 +563,24 @@
 /* --- 4. COMPONENTS LAYER (Custom Component Defaults) --- */
 /* ------------------------------------------------------------- */
 @layer components {
+
   /* Custom default component styling from your new theme */
-  input, textarea {
+  input,
+  textarea {
     background-color: var(--color-dtg-bg-hover) !important;
     border-color: var(--color-dtg-border-medium) !important;
     color: var(--color-dtg-text-primary) !important;
   }
-  input::placeholder, textarea::placeholder {
+
+  input::placeholder,
+  textarea::placeholder {
     color: var(--color-dtg-text-muted) !important;
   }
+
   button {
     border-color: var(--color-dtg-border-medium);
-    border-radius: var(--radius); /* Added from your original file */
+    border-radius: var(--radius);
+    /* Added from your original file */
   }
 }
 
@@ -555,23 +596,28 @@
   --card-foreground: #1a1a1a;
   --popover: #ffffff;
   --popover-foreground: #1a1a1a;
-  --primary: #2f5233; /* New DTG Teal */
+  --primary: #2f5233;
+  /* New DTG Teal */
   --primary-foreground: #ffffff;
-  --secondary: #f3f4f6; /* Light gray bg */
+  --secondary: #f3f4f6;
+  /* Light gray bg */
   --secondary-foreground: #2f5233;
   --muted: #f3f4f6;
-  --muted-foreground: #6b7280; /* Mid-gray text */
+  --muted-foreground: #6b7280;
+  /* Mid-gray text */
   --accent: #f3f4f6;
   --accent-foreground: #2f5233;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e5e7eb; /* Light gray border */
+  --border: #e5e7eb;
+  /* Light gray border */
   --input: #f3f4f6;
   --input-background: #f3f4f6;
   --switch-background: #e5e7eb;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #2f5233; /* Ring maps to primary */
+  --ring: #2f5233;
+  /* Ring maps to primary */
   --radius: .75rem;
 
   /* Chart Variables (Kept from new theme) */
@@ -580,7 +626,7 @@
   --chart-3: #3498db;
   --chart-4: #9b59b6;
   --chart-5: #e74c3c;
-  
+
   /* Sidebar Variables (Light Mode) */
   --sidebar: #2f5233;
   --sidebar-foreground: #ffffff;
@@ -588,7 +634,8 @@
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #3f6243;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #404040; /* This is dark, but matches dark theme sidebar */
+  --sidebar-border: #404040;
+  /* This is dark, but matches dark theme sidebar */
   --sidebar-ring: #6b7280;
 
   /* --- DTG Branding Variables (Light Mode) --- */
@@ -627,13 +674,69 @@
   --dtg-text-light: #9ca3af;
   --dtg-bg-primary: #ffffff;
   --dtg-bg-secondary: #f3f4f6;
-  --dtg-bg-sidebar: #2f5233; /* Sidebar is dark in both themes */
+  --dtg-bg-sidebar: #2f5233;
+  /* Sidebar is dark in both themes */
   --dtg-bg-card: #ffffff;
   --dtg-bg-hover: #f3f4f6;
   --dtg-border-light: #e5e7eb;
   --dtg-border-medium: #d1d5db;
   --dtg-border-dark: #9ca3af;
-  
+  --dtg-bg-header: linear-gradient(90deg, #293F6E 0%, #37ACA6 100%);
+
+  /* --- RED --- */
+  --red-from: #C00000;
+  /* red-800 */
+  --red-to: rgb(127 29 29 / 0.9);
+  /* red-900/90 */
+  --red-border: #c00000;
+  --red-from-hover: rgb(153 27 27 / 0.9);
+  --red-to-hover: rgb(127 29 29 / 0.8);
+
+  /* --- BLUE --- */
+  --blue-from: #1e40af;
+  /* blue-800 */
+  --blue-to: rgb(1 39 57 / 0.9);
+  /* blue-900/90 */
+  --blue-border: #1e40af;
+  --blue-from-hover: rgb(30 64 175 / 0.9);
+  --blue-to-hover: rgb(1 39 57 / 0.8);
+
+  /* --- GREEN --- */
+  --green-from: #38841C;
+  /* green-800 */
+  --green-to: rgb(28 74 12 / 0.9);
+  /* green-900/90 */
+  --green-border: #38841C;
+  --green-from-hover: rgb(56 132 28 / 0.9);
+  --green-to-hover: rgb(28 74 12 / 0.8);
+
+  /* --- ORANGE --- */
+  --orange-from: #9a3412;
+  /* orange-800 */
+  --orange-to: rgb(77 25 0 / 0.9);
+  /* orange-900/90 */
+  --orange-border: #9a3412;
+  --orange-from-hover: rgb(154 52 18 / 0.9);
+  --orange-to-hover: rgb(77 25 0 / 0.8);
+
+  /* --- YELLOW (Darkened for visibility on white) --- */
+  --yellow-from: #C79301;
+  /* yellow-800 */
+  --yellow-to: rgb(113 63 18 / 0.9);
+  /* yellow-900/90 */
+  --yellow-border: #C79301;
+  --yellow-from-hover: rgb(161 98 7 / 0.9);
+  --yellow-to-hover: rgb(113 63 18 / 0.8);
+
+  /* --- PURPLE --- */
+  --purple-from: #6b21a8;
+  /* purple-800 */
+  --purple-to: rgb(88 28 135 / 0.9);
+  /* purple-900/90 */
+  --purple-border: #6b21a8;
+  --purple-from-hover: rgb(107 33 168 / 0.9);
+  --purple-to-hover: rgb(88 28 135 / 0.8);
+
   /* Shadows (Light) */
   --dtg-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --dtg-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -647,7 +750,7 @@
 
   /* --- RGB Helper (For Light Mode Header) --- */
   --rgb-background: 255, 255, 255;
-  --dtg-primary-teal-dark-rgb:31, 52, 35;
+  --dtg-primary-teal-dark-rgb: 64, 64, 64;
 }
 
 /* ------------------------------------------------------------- */
@@ -680,14 +783,14 @@ html.dark {
   --font-weight-normal: 400;
   --ring: #6b7280;
   --radius: .75rem;
-  
+
   /* Chart Variables */
   --chart-1: #e67e22;
   --chart-2: #27ae60;
   --chart-3: #3498db;
   --chart-4: #9b59b6;
   --chart-5: #e74c3c;
-  
+
   /* Sidebar Variables */
   --sidebar: #2f5233;
   --sidebar-foreground: #fff;
@@ -697,7 +800,7 @@ html.dark {
   --sidebar-accent-foreground: #fff;
   --sidebar-border: #404040;
   --sidebar-ring: #6b7280;
-  
+
   /* --- DTG Branding Variables (Dark Mode) --- */
   /* Brand Colors (Consistent) */
   --dtg-primary-teal: #2f5233;
@@ -726,7 +829,7 @@ html.dark {
   --dtg-gray-700: #e5e7eb;
   --dtg-gray-800: #f3f4f6;
   --dtg-gray-900: #f9fafb;
-  
+
   /* Semantics (Dark) */
   --dtg-text-primary: #fff;
   --dtg-text-secondary: #d1d5db;
@@ -740,20 +843,77 @@ html.dark {
   --dtg-border-light: #404040;
   --dtg-border-medium: #525252;
   --dtg-border-dark: #6b7280;
-  
+  --dtg-bg-header: linear-gradient(0deg, #1a1a1a, #1a1a1a);
+
+  /* --- RED --- */
+  --red-from: rgb(239 68 68 / 0.2);
+  /* red-500/20 */
+  --red-to: rgb(220 38 38 / 0.1);
+  /* red-600/10 */
+  --red-border: rgb(239 68 68 / 0.3);
+  /* red-500/30 */
+  --red-from-hover: rgb(239 68 68 / 0.3);
+  --red-to-hover: rgb(220 38 38 / 0.2);
+
+  /* --- BLUE --- */
+  --blue-from: rgb(59 130 246 / 0.2);
+  /* blue-500/20 */
+  --blue-to: rgb(37 99 235 / 0.1);
+  /* blue-600/10 */
+  --blue-border: rgb(59 130 246 / 0.3);
+  --blue-from-hover: rgb(59 130 246 / 0.3);
+  --blue-to-hover: rgb(37 99 235 / 0.2);
+
+  /* --- GREEN --- */
+  --green-from: rgb(34 197 94 / 0.2);
+  /* green-500/20 */
+  --green-to: rgb(22 163 74 / 0.1);
+  /* green-600/10 */
+  --green-border: rgb(34 197 94 / 0.3);
+  --green-from-hover: rgb(34 197 94 / 0.3);
+  --green-to-hover: rgb(22 163 74 / 0.2);
+
+  /* --- ORANGE --- */
+  --orange-from: rgb(249 115 22 / 0.2);
+  /* orange-500/20 */
+  --orange-to: rgb(234 88 12 / 0.1);
+  /* orange-600/10 */
+  --orange-border: rgb(249 115 22 / 0.3);
+  --orange-from-hover: rgb(249 115 22 / 0.3);
+  --orange-to-hover: rgb(234 88 12 / 0.2);
+
+  /* --- YELLOW --- */
+  --yellow-from: rgb(234 179 8 / 0.2);
+  /* yellow-500/20 */
+  --yellow-to: rgb(202 138 4 / 0.1);
+  /* yellow-600/10 */
+  --yellow-border: rgb(234 179 8 / 0.3);
+  --yellow-from-hover: rgb(234 179 8 / 0.3);
+  --yellow-to-hover: rgb(202 138 4 / 0.2);
+
+  /* --- PURPLE --- */
+  --purple-from: rgb(168 85 247 / 0.2);
+  /* purple-500/20 */
+  --purple-to: rgb(147 51 234 / 0.1);
+  /* purple-600/10 */
+  --purple-border: rgb(168 85 247 / 0.3);
+  --purple-from-hover: rgb(168 85 247 / 0.3);
+  --purple-to-hover: rgb(147 51 234 / 0.2);
+
   /* Shadows (Dark) */
   --dtg-shadow-sm: 0 1px 3px #0000004d, 0 1px 2px #0006;
   --dtg-shadow-md: 0 4px 6px #0003, 0 1px 3px #0000004d;
   --dtg-shadow-lg: 0 10px 15px #00000040, 0 4px 6px #0003;
   --dtg-shadow-xl: 0 20px 25px #00000059, 0 10px 10px #00000026;
-  
+
   /* Gradients (Consistent) */
   --dtg-gradient-primary: linear-gradient(135deg, var(--dtg-primary-teal) 0%, var(--dtg-primary-teal-dark) 100%);
   --dtg-gradient-orange: linear-gradient(135deg, var(--dtg-accent-orange) 0%, var(--dtg-accent-orange-dark) 100%);
   --dtg-gradient-success: linear-gradient(135deg, var(--dtg-success-green) 0%, var(--dtg-success-green-light) 100%);
 
   /* --- RGB Helper (For Dark Mode Header) --- */
-  --rgb-background: 26, 26, 26; /* RGB for #1a1a1a */
+  --rgb-background: 26, 26, 26;
+  /* RGB for #1a1a1a */
   --dtg-primary-teal-dark-rgb: 104, 220, 210;
 }
 
@@ -776,17 +936,17 @@ html {
   left: 0;
   right: 0;
   z-index: 50;
-  
+
   /* Apply Border */
   border-bottom: 1px solid var(--border);
-  
+
   /* Apply Blur (If supported by browser) */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  
+
   /* Apply Background & Transparency using RGB helper */
   background-color: rgba(var(--rgb-background), 0.95);
-  
+
   /* Apply Transitions */
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
@@ -828,14 +988,18 @@ html {
 /* --- Keyframes (Ported from File 1 & 2) --- */
 
 @keyframes elegantFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: .1;
     transform: translateY(0)translateX(0)rotate(0);
   }
+
   33% {
     opacity: .2;
     transform: translateY(-20px)translateX(10px)rotate(120deg);
   }
+
   66% {
     opacity: .15;
     transform: translateY(-10px)translateX(-15px)rotate(240deg);
@@ -843,10 +1007,13 @@ html {
 }
 
 @keyframes twinkle {
-  0%, 100% {
+
+  0%,
+  100% {
     /* Your base state, matching your 'opacity-60' class */
     opacity: 0.6;
   }
+
   50% {
     /* The 'twinkle' state */
     opacity: 1;
@@ -859,14 +1026,17 @@ html {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--color-dtg-gray-100);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-dtg-gray-400);
   border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-dtg-gray-500);
 }
@@ -876,9 +1046,11 @@ html {
 .recharts-text {
   fill: var(--color-dtg-text-secondary) !important;
 }
+
 .recharts-cartesian-axis-tick-value {
   fill: var(--color-dtg-text-muted) !important;
 }
+
 .recharts-legend-item-text {
   color: var(--color-dtg-text-secondary) !important;
 }
@@ -887,12 +1059,15 @@ html {
 .bg-red-500\/10 {
   background-color: var(--color-red-500-10) !important;
 }
+
 .bg-yellow-500\/10 {
   background-color: var(--color-yellow-500-10) !important;
 }
+
 .bg-green-500\/10 {
   background-color: var(--color-green-500-10) !important;
 }
+
 .bg-blue-500\/10 {
   background-color: var(--color-blue-500-10) !important;
 }
@@ -907,293 +1082,358 @@ html {
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-translate-y {
   syntax: "*";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-translate-z {
   syntax: "*";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
   initial-value: 1;
 }
+
 @property --tw-scale-y {
   syntax: "*";
   inherits: false;
   initial-value: 1;
 }
+
 @property --tw-scale-z {
   syntax: "*";
   inherits: false;
   initial-value: 1;
 }
+
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
   initial-value: rotateX(0);
 }
+
 @property --tw-rotate-y {
   syntax: "*";
   inherits: false;
   initial-value: rotateY(0);
 }
+
 @property --tw-rotate-z {
   syntax: "*";
   inherits: false;
   initial-value: rotateZ(0);
 }
+
 @property --tw-skew-x {
   syntax: "*";
   inherits: false;
   initial-value: skewX(0);
 }
+
 @property --tw-skew-y {
   syntax: "*";
   inherits: false;
   initial-value: skewY(0);
 }
+
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-space-x-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-divide-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+
 @property --tw-gradient-position {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-gradient-from {
   syntax: "<color>";
   inherits: false;
   initial-value: #0000;
 }
+
 @property --tw-gradient-via {
   syntax: "<color>";
   inherits: false;
   initial-value: #0000;
 }
+
 @property --tw-gradient-to {
   syntax: "<color>";
   inherits: false;
   initial-value: #0000;
 }
+
 @property --tw-gradient-stops {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-gradient-via-stops {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-gradient-from-position {
   syntax: "<length-percentage>";
   inherits: false;
   initial-value: 0%;
 }
+
 @property --tw-gradient-via-position {
   syntax: "<length-percentage>";
   inherits: false;
   initial-value: 50%;
 }
+
 @property --tw-gradient-to-position {
   syntax: "<length-percentage>";
   inherits: false;
   initial-value: 100%;
 }
+
 @property --tw-leading {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-font-weight {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-tracking {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-shadow-color {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-shadow-alpha {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
 }
+
 @property --tw-inset-shadow {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-inset-shadow-color {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-inset-shadow-alpha {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
 }
+
 @property --tw-ring-color {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-ring-shadow {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-inset-ring-color {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-inset-ring-shadow {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-ring-inset {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-ring-offset-width {
   syntax: "<length>";
   inherits: false;
   initial-value: 0;
 }
+
 @property --tw-ring-offset-color {
   syntax: "*";
   inherits: false;
   initial-value: #fff;
 }
+
 @property --tw-ring-offset-shadow {
   syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
+
 @property --tw-blur {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-brightness {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-contrast {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-grayscale {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-hue-rotate {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-invert {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-opacity {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-saturate {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-sepia {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-drop-shadow {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-drop-shadow-color {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-drop-shadow-alpha {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 100%;
 }
+
 @property --tw-drop-shadow-size {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-brightness {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-contrast {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-grayscale {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-hue-rotate {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-invert {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-opacity {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-saturate {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-backdrop-sepia {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-duration {
   syntax: "*";
   inherits: false
 }
+
 @property --tw-ease {
   syntax: "*";
   inherits: false
@@ -1205,23 +1445,29 @@ html {
     transform: rotate(360deg);
   }
 }
+
 @keyframes ping {
-  75%, 100% {
+
+  75%,
+  100% {
     opacity: 0;
     transform: scale(2);
   }
 }
+
 @keyframes pulse {
   50% {
     opacity: .5;
   }
 }
+
 @keyframes enter {
   from {
     opacity: var(--tw-enter-opacity, 1);
     transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
   }
 }
+
 @keyframes exit {
   to {
     opacity: var(--tw-exit-opacity, 1);
@@ -1230,10 +1476,13 @@ html {
 }
 
 @keyframes twinkle {
-  0%, 100% {
+
+  0%,
+  100% {
     /* Your base state, matching your 'opacity-60' class */
     opacity: 0.2;
   }
+
   50% {
     /* The 'twinkle' state */
     opacity: 1;

@@ -9,7 +9,6 @@
   font-family: Inter, sans-serif;
   display: flex;
   flex-direction: column;
-  padding: 0 10;
 }
 
 /* Equivalent CSS for the inner <div> */
@@ -52,7 +51,7 @@
   /* Overrides for Active State */
   font-weight: bold;
   color: var(--dtg-text-primary); /* Active text colour */
-  background: rgba(var(--dtg-primary-teal-dark-rgb), 0.2); /* Active background colour */
+  background: rgba(var(--dtg-primary-teal-dark-rgb), 0.5); /* Active background colour */
 }
 
 /* --- Hover State (Standard CSS Pseudo-class) --- */

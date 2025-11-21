@@ -65,7 +65,7 @@ const [timeRange, setTimeRange] = useState('30days');
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-5">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-700)] text-sm">Total Alarms</span>
+            <span className="text-[var(--dtg-gray-400)] text-sm">Total Alarms</span>
             <AlertTriangle className="w-5 h-5 text-[#f97316]" />
           </div>
           <div className="text-3xl text-[var(--dtg-text-primary)]">1,182</div>
@@ -75,36 +75,51 @@ const [timeRange, setTimeRange] = useState('30days');
           </div>
         </div>
 
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-5">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--red-from)] 
+    to-[var(--red-to)] 
+    border-[var(--red-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-700)] text-sm">Critical Alarms</span>
+            <span className="text-[var(--dtg-gray-400)] text-sm">Critical Alarms</span>
             <Activity className="w-5 h-5 text-[#ef4444]" />
           </div>
-          <div className="text-3xl text-[var(--dtg-text-primary)]">47</div>
+          <div className="text-3xl text-white">47</div>
           <div className="flex items-center gap-1 mt-2">
-            <TrendingUp className="w-4 h-4 text-red-500" />
-            <span className="text-sm text-red-500">+3.1% vs last period</span>
+            <TrendingUp className="w-4 h-4 text-red-400" />
+            <span className="text-sm text-red-400">+3.1% vs last period</span>
           </div>
         </div>
 
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-5">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--blue-from)] 
+    to-[var(--blue-to)] 
+    border-[var(--blue-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-700)] text-sm">Avg Response Time</span>
+            <span className="text-[var(--dtg-gray-400)] text-sm">Avg Response Time</span>
             <Activity className="w-5 h-5 text-[#14b8a6]" />
           </div>
-          <div className="text-3xl text-[var(--dtg-text-primary)]">4.2m</div>
+          <div className="text-3xl text-white">4.2m</div>
           <div className="flex items-center gap-1 mt-2">
             <TrendingDown className="w-4 h-4 text-green-500" />
             <span className="text-sm text-green-500">-12% faster</span>
           </div>
         </div>
 
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-5">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--purple-from)] 
+    to-[var(--purple-to)] 
+    border-[var(--purple-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-700)] text-sm">False Positives</span>
+            <span className="text-[var(--dtg-gray-400)] text-sm">False Positives</span>
             <Filter className="w-5 h-5 text-[#8b5cf6]" />
           </div>
-          <div className="text-3xl text-[var(--dtg-text-primary)]">8.3%</div>
+          <div className="text-3xl text-white">8.3%</div>
           <div className="flex items-center gap-1 mt-2">
             <TrendingDown className="w-4 h-4 text-green-500" />
             <span className="text-sm text-green-500">-2.1% improvement</span>
@@ -152,6 +167,7 @@ const [timeRange, setTimeRange] = useState('30days');
               </Pie>
               <Tooltip 
                 contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #3a3a3a' }}
+                labelStyle={{ color: '#fff' }}
               />
             </PieChart>
           </ResponsiveContainer>

@@ -76,7 +76,7 @@ function Reports() {
   const [reportType, setReportType] = useState('all');
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [viewingReport, setViewingReport] = useState<'alarm' | 'data-quality' | 'availability' | 'safety' | null>(null);
-const getTypeColor = (type: string) => {
+  const getTypeColor = (type: string) => {
     switch (type) {
       case 'alarm': return 'bg-red-500/10 text-red-500 border-red-500/20';
       case 'data-quality': return 'bg-blue-500/10 text-blue-500 border-blue-500/20';
@@ -113,7 +113,7 @@ const getTypeColor = (type: string) => {
           <h1 className="text-2xl text-[var(--dtg-text-primary)]">Report Management</h1>
           <p className="text-[var(--dtg-gray-500)] text-sm mt-1">Generate, view, and export system reports</p>
         </div>
-        <Button 
+        <Button
           onClick={() => setShowCreateModal(true)}
           variant="brand"
         >
@@ -163,40 +163,68 @@ const getTypeColor = (type: string) => {
 
       {/* Quick Actions */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <button 
+        <button
           onClick={() => setViewingReport('alarm')}
-          className="bg-gradient-to-br from-red-500/20 to-red-600/10 border border-red-500/30 rounded-lg p-6 hover:from-red-500/30 hover:to-red-600/20 transition-all text-left group"
+          className="group rounded-lg p-6 text-left transition-all border bg-gradient-to-br
+    
+    from-[var(--red-from)] 
+    to-[var(--red-to)] 
+    border-[var(--red-border)]
+    
+    hover:from-[var(--red-from-hover)] 
+    hover:to-[var(--red-to-hover)]"
         >
           <AlertTriangle className="w-8 h-8 text-red-500 mb-3 group-hover:scale-110 transition-transform" />
-          <h3 className="text-[var(--dtg-text-primary)] mb-1">View Alarm Summary</h3>
-          <p className="text-sm text-[var(--dtg-gray-500)]">Comprehensive alarm analysis report</p>
+          <h3 className="text-white mb-1">View Alarm Summary</h3>
+          <p className="text-sm text-[var(--dtg-gray-400)]">Comprehensive alarm analysis report</p>
         </button>
 
-        <button 
+        <button
           onClick={() => setViewingReport('data-quality')}
-          className="bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/30 rounded-lg p-6 hover:from-blue-500/30 hover:to-blue-600/20 transition-all text-left group"
+          className="group rounded-lg p-6 text-left transition-all border bg-gradient-to-br
+    
+    from-[var(--blue-from)] 
+    to-[var(--blue-to)] 
+    border-[var(--blue-border)]
+    
+    hover:from-[var(--blue-from-hover)] 
+    hover:to-[var(--blue-to-hover)]"
         >
           <FileBarChart className="w-8 h-8 text-blue-500 mb-3 group-hover:scale-110 transition-transform" />
-          <h3 className="text-[var(--dtg-text-primary)] mb-1">View Data Quality</h3>
-          <p className="text-sm text-[var(--dtg-gray-500)]">Quality metrics and analysis</p>
+          <h3 className="text-white mb-1">View Data Quality</h3>
+          <p className="text-sm text-[var(--dtg-gray-400)]">Quality metrics and analysis</p>
         </button>
 
-        <button 
+        <button
           onClick={() => setViewingReport('availability')}
-          className="bg-gradient-to-br from-green-500/20 to-green-600/10 border border-green-500/30 rounded-lg p-6 hover:from-green-500/30 hover:to-green-600/20 transition-all text-left group"
+                    className="group rounded-lg p-6 text-left transition-all border bg-gradient-to-br
+    
+    from-[var(--green-from)] 
+    to-[var(--green-to)] 
+    border-[var(--green-border)]
+    
+    hover:from-[var(--green-from-hover)] 
+    hover:to-[var(--green-to-hover)]"
         >
           <TrendingUp className="w-8 h-8 text-green-500 mb-3 group-hover:scale-110 transition-transform" />
-          <h3 className="text-[var(--dtg-text-primary)] mb-1">View Availability</h3>
-          <p className="text-sm text-[var(--dtg-gray-500)]">Uptime and reliability report</p>
+          <h3 className="text-white mb-1">View Availability</h3>
+          <p className="text-sm text-[var(--dtg-gray-400)]">Uptime and reliability report</p>
         </button>
 
-        <button 
+        <button
           onClick={() => setViewingReport('safety')}
-          className="bg-gradient-to-br from-yellow-500/20 to-yellow-600/10 border border-yellow-500/30 rounded-lg p-6 hover:from-yellow-500/30 hover:to-yellow-600/20 transition-all text-left group"
+                    className="group rounded-lg p-6 text-left transition-all border bg-gradient-to-br
+    
+    from-[var(--yellow-from)] 
+    to-[var(--yellow-to)] 
+    border-[var(--yellow-border)]
+    
+    hover:from-[var(--yellow-from-hover)] 
+    hover:to-[var(--yellow-to-hover)]"
         >
           <CheckCircle className="w-8 h-8 text-yellow-500 mb-3 group-hover:scale-110 transition-transform" />
-          <h3 className="text-[var(--dtg-text-primary)] mb-1">View Safety Report</h3>
-          <p className="text-sm text-[var(--dtg-gray-500)]">Safety inspection data</p>
+          <h3 className="text-white mb-1">View Safety Report</h3>
+          <p className="text-sm text-[var(--dtg-gray-400)]">Safety inspection data</p>
         </button>
       </div>
 
@@ -259,14 +287,14 @@ const getTypeColor = (type: string) => {
                 <div className="flex items-center gap-2">
                   {report.status === 'completed' && (
                     <>
-                      <button 
+                      <button
                         onClick={() => {
                           if (report.type === 'alarm') setViewingReport('alarm');
                           else if (report.type === 'data-quality') setViewingReport('data-quality');
                           else if (report.type === 'availability') setViewingReport('availability');
                           else if (report.type === 'safety') setViewingReport('safety');
                         }}
-                        className="p-2 hover:bg-[var(--dtg-bg-card)] rounded-lg transition-all" 
+                        className="p-2 hover:bg-[var(--dtg-bg-card)] rounded-lg transition-all"
                         title="View Report"
                       >
                         <Eye className="w-4 h-4 text-[var(--dtg-gray-500)] hover:text-[var(--dtg-text-primary)]" />

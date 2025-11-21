@@ -85,7 +85,7 @@ function RadarMonitoring() {
   const avgQuality = Math.round(sensorData.reduce((acc, s) => acc + s.dataQuality, 0) / sensorData.length);
 
   return (
-    <div className="w-full space-y-4 pt-4">
+    <div className="w-full space-y-4 p-6">
 
       <div className="flex items-center justify-between">
         <div>
@@ -110,47 +110,72 @@ function RadarMonitoring() {
 
       {/* Compact KPI Cards */}
       <div className="grid grid-cols-5 gap-3">
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--red-from)] 
+    to-[var(--red-to)] 
+    border-[var(--red-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-700)] text-xs mb-1">Total Alarms</p>
-              <p className="text-3xl text-[var(--dtg-text-primary)]">{totalAlarms}</p>
+              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Total Alarms</p>
+              <p className="text-3xl text-white">{totalAlarms}</p>
             </div>
             <AlertTriangle className="w-10 h-10 text-red-500/30" />
           </div>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--blue-from)] 
+    to-[var(--blue-to)] 
+    border-[var(--blue-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-700)] text-xs mb-1">Events</p>
-              <p className="text-3xl text-[var(--dtg-text-primary)]">{totalEvents}</p>
+              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Events</p>
+              <p className="text-3xl text-white">{totalEvents}</p>
             </div>
             <Activity className="w-10 h-10 text-blue-500/30" />
           </div>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--green-from)] 
+    to-[var(--green-to)] 
+    border-[var(--green-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-700)] text-xs mb-1">Online</p>
-              <p className="text-3xl text-[var(--dtg-text-primary)]">{onlineDevices}/{totalDevices}</p>
+              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Online</p>
+              <p className="text-3xl text-white">{onlineDevices}/{totalDevices}</p>
             </div>
             <CheckCircle className="w-10 h-10 text-green-500/30" />
           </div>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--yellow-from)] 
+    to-[var(--yellow-to)] 
+    border-[var(--yellow-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-700)] text-xs mb-1">Avg Quality</p>
+              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Avg Quality</p>
               <p className={`text-3xl ${getQualityColor(avgQuality)}`}>{avgQuality}%</p>
             </div>
             <TrendingUp className="w-10 h-10 text-teal-500/30" />
           </div>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="bborder rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--purple-from)] 
+    to-[var(--purple-to)] 
+    border-[var(--purple-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-700)] text-xs mb-1">Last Update</p>
-              <p className="text-lg text-[var(--dtg-text-primary)]">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
+              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Last Update</p>
+              <p className="text-lg text-white">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
             </div>
             <Clock className="w-10 h-10 text-purple-500/30" />
           </div>

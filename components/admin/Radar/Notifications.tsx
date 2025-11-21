@@ -144,7 +144,7 @@ export default function Notifications() {
   };
 
   return (
-    <div className="w-full space-y-4 pt-4">
+    <div className="w-full space-y-4 p-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -173,42 +173,67 @@ export default function Notifications() {
             <Bell className="w-5 h-5 text-[var(--dtg-primary-teal-dark)]" />
             <span className="text-2xl text-[var(--dtg-text-primary)]">{notifications.length}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Total Notifications</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Total Notifications</p>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-red-500/30 rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--red-from)] 
+    to-[var(--red-to)] 
+    border-[var(--red-border)]">
           <div className="flex items-center justify-between mb-2">
             <AlertTriangle className="w-5 h-5 text-red-400" />
             <span className="text-2xl text-red-400">{criticalCount}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Critical Alerts</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Critical Alerts</p>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-orange-500/30 rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--yellow-from)] 
+    to-[var(--yellow-to)] 
+    border-[var(--yellow-border)]">
           <div className="flex items-center justify-between mb-2">
             <Zap className="w-5 h-5 text-orange-400" />
             <span className="text-2xl text-orange-400">{actionRequiredCount}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Action Required</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Action Required</p>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--blue-from)] 
+    to-[var(--blue-to)] 
+    border-[var(--blue-border)]">
           <div className="flex items-center justify-between mb-2">
             <TrendingUp className="w-5 h-5 text-blue-400" />
             <span className="text-2xl text-blue-400">{typeStats.deformation}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Deformation</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Deformation</p>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--orange-from)] 
+    to-[var(--orange-to)] 
+    border-[var(--orange-border)]">
           <div className="flex items-center justify-between mb-2">
             <WifiOff className="w-5 h-5 text-orange-400" />
             <span className="text-2xl text-orange-400">{typeStats.downtime}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Downtime</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Downtime</p>
         </div>
-        <div className="bg-[var(--dtg-bg-card)] border border-[var(--dtg-border-medium)] rounded-lg p-4">
+        <div className="border rounded-lg p-4
+    bg-gradient-to-br
+    
+    from-[var(--green-from)] 
+    to-[var(--green-to)] 
+    border-[var(--green-border)]">
           <div className="flex items-center justify-between mb-2">
             <CheckCircle className="w-5 h-5 text-green-400" />
             <span className="text-2xl text-green-400">{typeStats.restored}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-700)]">Restored</p>
+          <p className="text-xs text-[var(--dtg-gray-400)]">Restored</p>
         </div>
       </div>
 
