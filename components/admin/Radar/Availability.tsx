@@ -122,7 +122,7 @@ function Availability() {
     to-[var(--blue-to)] 
     border-[var(--blue-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-400)] text-sm">Average Uptime</span>
+            <span className="text-white text-sm">Average Uptime</span>
             <Activity className="w-5 h-5 text-[#14b8a6]" />
           </div>
           <div className={`text-3xl ${getUptimeColor(avgUptime)}`}>
@@ -141,12 +141,12 @@ function Availability() {
     to-[var(--red-to)] 
     border-[var(--red-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-400)] text-sm">Total Downtime</span>
+            <span className="text-white text-sm">Total Downtime</span>
             <Clock className="w-5 h-5 text-[#f97316]" />
           </div>
           <div className="text-3xl text-white">{totalDowntime}h</div>
           <div className="flex items-center gap-1 mt-2">
-            <span className="text-sm text-[var(--dtg-gray-400)]">Across all systems</span>
+            <span className="text-sm text-white">Across all systems</span>
           </div>
         </div>
 
@@ -157,12 +157,12 @@ function Availability() {
     to-[var(--orange-to)] 
     border-[var(--orange-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-400)] text-sm">Total Incidents</span>
+            <span className="text-white text-sm">Total Incidents</span>
             <AlertCircle className="w-5 h-5 text-[#ef4444]" />
           </div>
           <div className="text-3xl text-white">{totalIncidents}</div>
           <div className="flex items-center gap-1 mt-2">
-            <span className="text-sm text-[var(--dtg-gray-400)]">Last 30 days</span>
+            <span className="text-sm text-white">Last 30 days</span>
           </div>
         </div>
 
@@ -173,7 +173,7 @@ function Availability() {
     to-[var(--purple-to)] 
     border-[var(--purple-border)]">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[var(--dtg-gray-400)] text-sm">Avg MTBF</span>
+            <span className="text-white text-sm">Avg MTBF</span>
             <Zap className="w-5 h-5 text-[#8b5cf6]" />
           </div>
           <div className="text-3xl text-white">{avgMTBF.toFixed(0)}h</div>

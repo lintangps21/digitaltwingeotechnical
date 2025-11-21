@@ -118,7 +118,7 @@ function RadarMonitoring() {
     border-[var(--red-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Total Alarms</p>
+              <p className="text-white text-xs mb-1">Total Alarms</p>
               <p className="text-3xl text-white">{totalAlarms}</p>
             </div>
             <AlertTriangle className="w-10 h-10 text-red-500/30" />
@@ -132,7 +132,7 @@ function RadarMonitoring() {
     border-[var(--blue-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Events</p>
+              <p className="text-white text-xs mb-1">Events</p>
               <p className="text-3xl text-white">{totalEvents}</p>
             </div>
             <Activity className="w-10 h-10 text-blue-500/30" />
@@ -146,7 +146,7 @@ function RadarMonitoring() {
     border-[var(--green-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Online</p>
+              <p className="text-white text-xs mb-1">Online</p>
               <p className="text-3xl text-white">{onlineDevices}/{totalDevices}</p>
             </div>
             <CheckCircle className="w-10 h-10 text-green-500/30" />
@@ -160,7 +160,7 @@ function RadarMonitoring() {
     border-[var(--yellow-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Avg Quality</p>
+              <p className="text-white text-xs mb-1">Avg Quality</p>
               <p className={`text-3xl ${getQualityColor(avgQuality)}`}>{avgQuality}%</p>
             </div>
             <TrendingUp className="w-10 h-10 text-teal-500/30" />
@@ -174,7 +174,7 @@ function RadarMonitoring() {
     border-[var(--purple-border)]">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-[var(--dtg-gray-400)] text-xs mb-1">Last Update</p>
+              <p className="text-white text-xs mb-1">Last Update</p>
               <p className="text-lg text-white">{new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</p>
             </div>
             <Clock className="w-10 h-10 text-purple-500/30" />

@@ -185,7 +185,7 @@ export default function Notifications() {
             <AlertTriangle className="w-5 h-5 text-red-400" />
             <span className="text-2xl text-red-400">{criticalCount}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-400)]">Critical Alerts</p>
+          <p className="text-xs text-white">Critical Alerts</p>
         </div>
         <div className="border rounded-lg p-4
     bg-gradient-to-br
@@ -197,7 +197,7 @@ export default function Notifications() {
             <Zap className="w-5 h-5 text-orange-400" />
             <span className="text-2xl text-orange-400">{actionRequiredCount}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-400)]">Action Required</p>
+          <p className="text-xs text-white">Action Required</p>
         </div>
         <div className="border rounded-lg p-4
     bg-gradient-to-br
@@ -209,7 +209,7 @@ export default function Notifications() {
             <TrendingUp className="w-5 h-5 text-blue-400" />
             <span className="text-2xl text-blue-400">{typeStats.deformation}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-400)]">Deformation</p>
+          <p className="text-xs text-white">Deformation</p>
         </div>
         <div className="border rounded-lg p-4
     bg-gradient-to-br
@@ -221,7 +221,7 @@ export default function Notifications() {
             <WifiOff className="w-5 h-5 text-orange-400" />
             <span className="text-2xl text-orange-400">{typeStats.downtime}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-400)]">Downtime</p>
+          <p className="text-xs text-white">Downtime</p>
         </div>
         <div className="border rounded-lg p-4
     bg-gradient-to-br
@@ -233,7 +233,7 @@ export default function Notifications() {
             <CheckCircle className="w-5 h-5 text-green-400" />
             <span className="text-2xl text-green-400">{typeStats.restored}</span>
           </div>
-          <p className="text-xs text-[var(--dtg-gray-400)]">Restored</p>
+          <p className="text-xs text-white">Restored</p>
         </div>
       </div>
 

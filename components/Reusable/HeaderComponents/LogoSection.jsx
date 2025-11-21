@@ -81,7 +81,7 @@ function LogoSection({ Subtitle = [] }) {
                         <h4 className="text-white">
                             {userSite.displayname}
                         </h4>
-                        <p className="text-[var(--dtg-text-muted)]">
+                        <p className="text-white">
                             {userSite.site?.site_name
                                 ? `${userSite.site.site_name}, ${userSite.site.company}`
                                 : "Administrator"}
